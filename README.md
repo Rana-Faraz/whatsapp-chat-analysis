@@ -55,6 +55,21 @@ The analysis results will be:
 - Printed to the console
 - Exported to `chat_analysis_results.json`
 
+3. Run the server:
+
+```bash
+uvicorn server:app --reload
+```
+
+- The server will be running on `http://localhost:8000`
+- You can send a WhatsApp chat file to the `/analyze` endpoint to get the analysis results
+
+4. Send a WhatsApp chat file to the `/analyze` endpoint:
+
+```bash
+curl -X POST -F "file=@data/_chat.txt" http://localhost:8000/analyze
+```
+
 ## Project Structure
 
 ```

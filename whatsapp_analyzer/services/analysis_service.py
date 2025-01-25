@@ -27,6 +27,10 @@ class ChatAnalysisService:
         self._export_results()
         self._print_results()
         return self.results
+    
+    def get_results(self):
+        """Get analysis results."""
+        return self.results
 
     def _export_results(self):
         """Export analysis results to JSON file."""
