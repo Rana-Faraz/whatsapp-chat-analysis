@@ -23,21 +23,18 @@ class ChatAnalysisService:
         for analyzer in analyzers:
             self.results[analyzer.name] = analyzer.analyze()
         
-        # Export results to JSON
-        self._export_results()
-        self._print_results()
         return self.results
     
     def get_results(self):
         """Get analysis results."""
         return self.results
 
-    def _export_results(self):
+    def export_results(self):
         """Export analysis results to JSON file."""
         with open('data/chat_analysis_results.json', 'w', encoding='utf-8') as f:
             json.dump(self.results, f, ensure_ascii=False, indent=4)
 
-    def _print_results(self):
+    def print_results(self):
         """Print analysis results."""
         word_results = self.results.get("word_analysis", {})
         time_results = self.results.get("time_analysis", {})

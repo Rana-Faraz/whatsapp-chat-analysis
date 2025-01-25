@@ -150,7 +150,7 @@ __all__ = [
 4. Access results in `analysis_service.py`:
 
 ```python
-def _print_results(self):
+def print_results(self):
     # ... existing code ...
     my_results = self.results.get("my_analysis", {})
     print(f"\nMy analysis results:")
