@@ -5,6 +5,10 @@ from .word_analyzer import WordAnalyzer
 from .emoji_analyzer import EmojiAnalyzer
 from .time_analyzer import TimeAnalyzer
 from .sentiment_analyzer import SentimentAnalyzer
+from .response_time_analyzer import ResponseTimeAnalyzer
+from .conversation_starter_analyzer import ConversationStarterAnalyzer
+from .thread_analyzer import ThreadAnalyzer
+from .sentiment_correlation_analyzer import SentimentCorrelationAnalyzer
 
 class AnalyzerRegistry:
     """Registry for managing and creating analyzers."""
@@ -19,6 +23,10 @@ class AnalyzerRegistry:
         self.register_analyzer("emoji", EmojiAnalyzer)
         self.register_analyzer("time", TimeAnalyzer)
         self.register_analyzer("sentiment", SentimentAnalyzer)
+        self.register_analyzer("response_time", ResponseTimeAnalyzer)
+        self.register_analyzer("conversation_starter", ConversationStarterAnalyzer)
+        self.register_analyzer("thread", ThreadAnalyzer)
+        self.register_analyzer("sentiment_correlation", SentimentCorrelationAnalyzer)
 
     def register_analyzer(self, name: str, analyzer_class: Type[BaseAnalyzer]):
         """Register a new analyzer."""

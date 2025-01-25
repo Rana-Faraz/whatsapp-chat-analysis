@@ -11,6 +11,7 @@ def main():
     # Initialize and run the analysis service
     service = ChatAnalysisService('data/_chat.txt', heart_emojis)
     service.analyze()
+    service.export_results()
 
 if __name__ == "__main__":
     main() 
