@@ -17,7 +17,7 @@ A Python package for analyzing WhatsApp chat export files. This tool provides de
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/whatsapp-chat-analysis.git
+git clone https://github.com/Rana-Faraz/whatsapp-chat-analysis.git
 cd whatsapp-chat-analysis
 ```
 
