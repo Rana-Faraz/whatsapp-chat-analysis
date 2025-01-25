@@ -42,7 +42,7 @@ pip install -r requirements.txt
    - Click on the three dots (⋮)
    - Select "More"
    - Choose "Export chat"
-   - Save the exported file as "\_chat.txt" in the project directory
+   - Save the exported file as "data/\_chat.txt" in the project directory
 
 2. Run the analysis:
 
