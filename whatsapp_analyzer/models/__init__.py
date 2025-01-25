@@ -1,0 +1,5 @@
+"""Models for WhatsApp chat analysis."""
+
+from .message import Message
+
+__all__ = ['Message'] 

@@ -1,0 +1,45 @@
+# Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environment
+venv/
+.env
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Test coverage
+.coverage
+nosetests.xml
+coverage.xml
+
+# Jupyter Notebook checkpoints
+*.ipynb_checkpoints
+
+# Logs
+*.log
+
+# Miscellaneous
+*.html
+*.pdf
+*.docx
+*.xlsx
+
+
+# Ignore all files in the data directory
+data/
