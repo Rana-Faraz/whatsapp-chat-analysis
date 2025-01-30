@@ -1,6 +1,6 @@
 # WhatsApp Chat Analyzer
 
-A Python package for analyzing WhatsApp chat export files. This tool provides detailed insights into your WhatsApp conversations, including message patterns, emoji usage, and more.
+A Python package for analyzing WhatsApp chat export files. This tool provides detailed insights into your WhatsApp conversations, including message patterns, emoji usage, response times, conversation dynamics, and more.
 
 ## Features
 
@@ -10,6 +10,10 @@ A Python package for analyzing WhatsApp chat export files. This tool provides de
 - Time-based message pattern analysis
 - Call duration tracking
 - Sentiment analysis (laughter and love expressions)
+- Response time analysis between users
+- Conversation starter identification
+- Thread length analysis
+- Sentiment correlation between users
 - Detailed JSON export of analysis results
 
 ## Installation
@@ -55,20 +59,70 @@ The analysis results will be:
 - Printed to the console
 - Exported to `chat_analysis_results.json`
 
-3. Run the server:
+3. Run the Flask server:
 
 ```bash
-uvicorn server:app --reload
+python server.py
 ```
 
-- The server will be running on `http://localhost:8000`
+- The server will be running on `http://localhost:5000`
 - You can send a WhatsApp chat file to the `/analyze` endpoint to get the analysis results
 
 4. Send a WhatsApp chat file to the `/analyze` endpoint:
 
 ```bash
-curl -X POST -F "file=@data/_chat.txt" http://localhost:8000/analyze
+curl -X POST -F "file=@data/_chat.txt" http://localhost:5000/analyze
 ```
+
+## Analysis Features
+
+1. Basic Analysis:
+
+   - Most frequent words
+   - Messages per day
+   - Messages per user
+   - Morning vs. night message patterns
+
+2. Emoji Analysis:
+
+   - Top emojis used
+   - Heart emoji usage
+
+3. User Behavior:
+
+   - First message by each user
+   - Time spent messaging
+   - Word count per user
+
+4. Response Time Analysis:
+
+   - Average response time between users
+   - Fastest and slowest responders
+   - Response patterns over time
+
+5. Conversation Dynamics:
+
+   - Identification of conversation starters
+   - Percentage of conversations initiated by each user
+   - Top conversation initiators
+
+6. Thread Analysis:
+
+   - Total number of conversation threads
+   - Average thread length
+   - Longest thread details with participants
+   - Thread duration statistics
+
+7. Sentiment Analysis:
+
+   - Basic sentiment indicators (laughter, love expressions)
+   - Sentiment correlation between users
+   - Sentiment influencers in the chat
+   - Emotional synchronization patterns
+
+8. Call Analysis:
+   - Total call duration
+   - Call frequency patterns
 
 ## Project Structure
 
@@ -88,7 +142,11 @@ whatsapp_analyzer/
 │       ├── word_analyzer.py
 │       ├── emoji_analyzer.py
 │       ├── time_analyzer.py
-│       └── sentiment_analyzer.py
+│       ├── sentiment_analyzer.py
+│       ├── response_time_analyzer.py
+│       ├── conversation_starter_analyzer.py
+│       ├── thread_analyzer.py
+│       └── sentiment_correlation_analyzer.py
 └── __init__.py
 ```
 
