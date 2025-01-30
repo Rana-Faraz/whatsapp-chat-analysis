@@ -20,6 +20,10 @@ heart_emojis = {
     '❤️', '🧡', '💛', '💚', '💙', '💜', '🖤', '🤍', '🤎', '💔', '❤️‍🔥', '❤️‍🩹', '♥️', '💗'
 }
 
+@app.get("/hello")
+async def hello():
+    return  "Hello, World!"
+
 @app.post("/analyze")
 async def analyze_chat(file: UploadFile = File(...)):
     """
