@@ -13,7 +13,7 @@ heart_emojis = {
 
 @app.route('/hello')
 def hello():
-    return "Hello, World!"
+    return {"message": "Hello, World!"}
 
 @app.route('/analyze', methods=['POST'])
 def analyze_chat():
