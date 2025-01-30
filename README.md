@@ -65,13 +65,13 @@ The analysis results will be:
 python server.py
 ```
 
-- The server will be running on `http://localhost:5000`
+- The server will be running on `http://127.0.0.1:5000`
 - You can send a WhatsApp chat file to the `/analyze` endpoint to get the analysis results
 
 4. Send a WhatsApp chat file to the `/analyze` endpoint:
 
 ```bash
-curl -X POST -F "file=@data/_chat.txt" http://localhost:5000/analyze
+curl -X POST -F "file=@data/_chat.txt" http://127.0.0.1:5000/analyze
 ```
 
 ## Analysis Features
