@@ -62,7 +62,7 @@ The analysis results will be:
 3. Run the Flask server:
 
 ```bash
-python server.py
+python index.py
 ```
 
 - The server will be running on `http://127.0.0.1:5000`
